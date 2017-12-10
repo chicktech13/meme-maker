@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:focusable="true"
     android:focusableInTouchMode="true"
+    android:orientation="vertical"
     android:padding="12dp"
+    android:background="#490f"
     tools:context=".NewMemeActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Choose a picture"/>
+        android:text="Choose a picture" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,64 +21,77 @@
 
         <Button
             android:id="@+id/gallery_button"
+            style="@style/Button.Primary"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            style="@style/Button.Primary"
-            android:text="From gallery"/>
+            android:background="@color/colorAccent"
+            android:backgroundTint="@color/colorAccent"
+            android:text="From gallery" />
 
         <Button
             android:id="@+id/camera_button"
+            style="@style/Button.Primary"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            style="@style/Button.Primary"
-            android:text="Take photo"/>
+            android:background="@color/colorAccent"
+            android:backgroundTint="@color/colorAccent"
+            android:text="Take photo" />
 
     </LinearLayout>
 
-    <RelativeLayout android:layout_width="match_parent"
-                    android:id="@+id/meme"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"
-                    android:layout_marginTop="16dp">
+    <RelativeLayout
+        android:id="@+id/meme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp">
 
         <ImageView
             android:id="@+id/image_thumbnail"
             android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="#490f45"
             android:scaleType="fitCenter"
-            android:src="@drawable/shut_up_and_take_my_money"
-            android:layout_height="200dp"/>
+            android:src="@drawable/shut_up_and_take_my_money" />
 
         <EditText
             android:id="@+id/top_text_input"
             android:layout_width="match_parent"
-            android:background="@android:color/transparent"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:textStyle="bold"
-            android:textColor="@android:color/white"
-            android:hint="Top Text"
             android:layout_alignTop="@id/image_thumbnail"
-        />
+            android:background="@android:color/transparent"
+            android:gravity="center_horizontal"
+            android:hint="Top Text"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/bottom_text_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Bottom Text"
-            android:gravity="center_horizontal"
-            android:textStyle="bold"
-            android:textColor="@android:color/white"
+            android:layout_alignBottom="@id/image_thumbnail"
             android:background="@android:color/transparent"
-            android:layout_alignBottom="@id/image_thumbnail"/>
+            android:gravity="center_horizontal"
+            android:hint="Bottom Text"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
     </RelativeLayout>
 
     <Button
         android:id="@+id/save_button"
+        style="@style/Button.Primary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Save"
-        style="@style/Button.Primary"/>
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorAccent"
+        android:backgroundTint="@color/colorAccent"
+        android:text="Save" />
 
 </LinearLayout>
